@@ -1,7 +1,8 @@
-.site-layout-content {
+  .site-layout-content {
     margin: 0px 24px;
     padding: 24px;
   }
+
   #components-layout-demo-top .logo {
     float: left;
     width: 120px;
@@ -24,6 +25,7 @@
 
   .content{
     padding: 0 50px;
+    background-color: white;
   }
 
   .layout{
@@ -31,7 +33,10 @@
   }
 
   .footer{
-      bottom: 0;
+      bottom: 0;  
+      position: fixed;
+      left: 0;
+      width: 100%;
       text-align: center;
   }
 

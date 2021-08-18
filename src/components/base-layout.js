@@ -16,7 +16,7 @@ export default function BaseLayout(props){
                     {props.children}
                 </div>
             </Content>
-            <Footer className="footer">Github Repo Web ©2021 Created by Renaldy Kharisma</Footer>
+            <Footer className="footer">React Github Project Website ©2021 Created by Renaldy Kharisma</Footer>
         </Layout>
     )
 }
