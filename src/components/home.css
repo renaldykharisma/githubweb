@@ -1,0 +1,32 @@
+.search-field{
+    text-align: center;
+    /* margin: 70px auto 0; */
+    width: 100%;
+}
+
+.search-deck{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .card{
+        width: 100%;
+    }
+
+    .search-field{
+        text-align: center;
+        margin: 10px auto 0;
+    }
+
+    .search-deck{
+        display: block;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card-content{
+        margin-top: 80px;
+    }
+}
