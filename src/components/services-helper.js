@@ -8,7 +8,6 @@ export default class Services extends BaseService{
         let urlOrg = 'orgs';
         let pageQuery = `per_page=${per_page}&page=${page}`;
         let query = `${axiosInstance.defaults.baseURL}/${type === 0 ? urlUser : urlOrg}/${names ? names : ''}/repos?${pageQuery}`;
-        console.log('query: ', query);
         return await this.get(query);
     }
 
