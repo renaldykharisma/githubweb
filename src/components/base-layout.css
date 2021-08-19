@@ -1,5 +1,5 @@
   .site-layout-content {
-    margin: 0px 24px;
+    margin: 0px 24px 70px;
     padding: 24px;
   }
 
@@ -11,11 +11,18 @@
   }
 
   .logo{
-    text-align: center;
+    text-align: left;
+  }
+
+  .githublogo{
+    display: flex;
+    align-items: center;
   }
 
   .header{
     height: 70px;
+    display: flex;
+    justify-content: space-between;
   }
 
   .ant-row-rtl #components-layout-demo-top .logo {
@@ -29,21 +36,23 @@
   }
 
   .layout{
-      min-height: 100vh;
-  }
-
-  .footer{
-      bottom: 0;  
-      position: fixed;
-      left: 0;
-      width: 100%;
-      text-align: center;
+    min-height: 100vh;
   }
 
   @media only screen and (max-width: 600px) {
     .site-layout-content {
       padding: 0 0;
       margin: 12px 0;
+    }
+
+    .header{
+      height: 70px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .logo{
+      text-align: center;
     }
 
     .content{
