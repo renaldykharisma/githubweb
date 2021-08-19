@@ -1,11 +1,8 @@
 import './base-layout.css';
-import { Button, Layout } from 'antd';
+import { Button, Layout, Space } from 'antd';
 import useBreakpoint from 'antd/lib/grid/hooks/useBreakpoint';
-import {
-    GithubFilled
-  } from '@ant-design/icons';
 
-const { Header, Content, Footer } = Layout;
+const { Header, Content } = Layout;
 export default function BaseLayout(props){
     const screens = useBreakpoint();
     return(
@@ -16,9 +13,9 @@ export default function BaseLayout(props){
                 </div>
                 {
                     !screens.xs ? 
-                    <div className="githublogo">
-                        <GithubFilled style={{fontSize: 45, color: 'white'}} />&nbsp;&nbsp;
-                        <Button type="link" href={'https://github.com/renaldykharisma/githubweb'}><span style={{fontSize: 20, color: 'white'}}>Source Code</span></Button>
+                    <div>
+                        <Button type="text" onClick={()=>{window.open('https://github.com/renaldykharisma/githubweb', "_blank")}}><p style={{color: 'white'}}>
+                        Click Here to Show Source Code</p></Button>
                     </div> : <></>
                 }
             </Header>
