@@ -12,8 +12,12 @@ export default class Services extends BaseService{
         return await this.get(query);
     }
 
-    async GetPokemonCriteria(url){
-        return await this.get(`${url}`);
+    async getUserInformation(name){
+        return await this.get(`${axiosInstance.defaults.baseURL}/users/${name}`);
+    }
+
+    async getLanguages(url){
+        return await this.get(url);
     }
 
 }
