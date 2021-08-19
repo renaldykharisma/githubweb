@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import BaseLayout from "../components/base-layout";
-import home from "../components/home";
+import Home from "../components/home";
 
 export default function RouterRoot(){
     return(
@@ -8,7 +8,7 @@ export default function RouterRoot(){
             <Router>
                 <Switch>
                     <BaseLayout>
-                        <Route path="/" component={home}></Route>
+                        <Route path="/" component={Home}></Route>
                     </BaseLayout>
                 </Switch>
             </Router>
