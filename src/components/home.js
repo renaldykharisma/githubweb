@@ -106,7 +106,7 @@ export default function Home(){
                                 <Card className="card" 
                                 title={item.name} 
                                 actions={[
-                                <Button type="text" href={`https://github.com/${name}/${item.name}`}>Repo detail</Button>,
+                                <Button type="text" onClick={()=>{window.open(`https://github.com/${name}/${item.name}`, "_blank")}}>Repo detail</Button>,
                                 ]}>
                                     {
                                         <CardLayout dataRepos={item}></CardLayout>
