@@ -3,6 +3,10 @@ import React, { useState, useEffect } from 'react';
 import { GithubOutlined } from '@ant-design/icons';
 import useBreakpoint from 'antd/lib/grid/hooks/useBreakpoint';
 import './profile.css';
+import {
+    HomeOutlined,
+    BankOutlined
+  } from '@ant-design/icons';
 
 export default function Profile(profileData){
     const screens = new useBreakpoint();
@@ -21,19 +25,17 @@ export default function Profile(profileData){
         <div breakpoint="xs">
             {
                 !screens.xs ? 
-                <Space className="layout-profile" size={40} align="center">
+                <Space className="layout-profile" size={15} align="center">
                     <div className="avatar-profile">
                         <Avatar
                             size={{ xs: 24, sm: 32, md: 40, lg: 64, xl: 80, xxl: 100 }}
                             src={dataProfileState.avatar_url}
                         />&nbsp;&nbsp;
-                        <div style={{marginTop: '8px'}}>
-                            <p>{dataProfileState.login}</p>
-                            <p>{dataProfileState.bio}</p>
-                        </div> 
+                        <span >{dataProfileState.login}</span> 
                     </div>
-                    <span>Location: {dataProfileState.location ? dataProfileState.location : '-'}</span>
-                    <span>Work In: {dataProfileState.company ? dataProfileState.company : '-'}</span>
+                    <span>{dataProfileState.bio}</span>
+                    <span><HomeOutlined />&nbsp;: {dataProfileState.location ? dataProfileState.location : '-'}</span>
+                    <span><BankOutlined />&nbsp;: {dataProfileState.company ? dataProfileState.company : '-'}</span>
                     <span>{dataProfileState.followers}&nbsp;Followers</span>
                     <span>{dataProfileState.following}&nbsp;Following</span>
                     <span>{dataProfileState.public_repos}&nbsp;Repositories</span>
