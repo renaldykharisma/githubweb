@@ -57,6 +57,9 @@ export default function Home(){
                 setDataResp(dataResp => dataResp = respRepoList.data);
                 setUserInfo(userInfo => userInfo = resp.data);
             }else{
+                setDataResp(dataResp => dataResp = []);
+                setUserInfo(userInfo => userInfo = null);
+                setPage(page => page = 1);
                 message.error(respRepoList.error.toString());
             }
             setIsLoad(false);
