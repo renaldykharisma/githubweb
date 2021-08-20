@@ -96,9 +96,11 @@ export default function Home(){
             </div>
             <Spin size="large" spinning={isLoad}>
                 <br />
-                {
-                    !userInfo ? <></> : <Profile profileData={userInfo}></Profile>
-                }   
+                <div  className="profile-ui">
+                    {
+                        !userInfo ? <></> : <Profile profileData={userInfo}></Profile>
+                    }   
+                </div>
                 <br />
                 <List
                     grid={{ gutter: 3, xs: 1, sm: 2, md: 2, lg: 2, xl: 3, xxl: 4 }}
