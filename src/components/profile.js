@@ -1,4 +1,4 @@
-import { Avatar, Button } from 'antd';
+import { Avatar, Button, Space } from 'antd';
 import React, { useState, useEffect } from 'react';
 import { GithubOutlined } from '@ant-design/icons';
 import useBreakpoint from 'antd/lib/grid/hooks/useBreakpoint';
@@ -21,7 +21,7 @@ export default function Profile(profileData){
         <div breakpoint="xs">
             {
                 !screens.xs ? 
-                <div className="layout-profile">
+                <Space className="layout-profile" size={40} align="center">
                     <div className="avatar-profile">
                         <Avatar
                             size={{ xs: 24, sm: 32, md: 40, lg: 64, xl: 80, xxl: 100 }}
@@ -40,7 +40,7 @@ export default function Profile(profileData){
                     <Button type="primary" shape="round" icon={<GithubOutlined />} onClick={()=>{window.open(`https://github.com/${dataProfileState.login}`, "_blank")}}>
                         Visit Profile
                     </Button>
-                </div> 
+                </Space> 
                 :
                 <div>
 
