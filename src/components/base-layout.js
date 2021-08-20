@@ -1,5 +1,5 @@
 import './base-layout.css';
-import { Button, Layout, Space } from 'antd';
+import { Button, Layout } from 'antd';
 import useBreakpoint from 'antd/lib/grid/hooks/useBreakpoint';
 
 const { Header, Content } = Layout;
