@@ -5,7 +5,6 @@ import { tokenGit } from '../env';
 export default class BaseService extends React.Component{
     async get(urls){
         let result = null;
-        console.log('tokenGit: ', tokenGit);
         await Axios.get(encodeURI(urls), {headers: {"Authorization": `token ${tokenGit}`}})
         .then(response =>{
             let resp = response;
