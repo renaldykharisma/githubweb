@@ -68,7 +68,7 @@ export default function Home(){
 
     async function getRepoList(roleid, name, perpage, page){
         const resp = await service.getRepoList(roleid, name, perpage, page);
-        return {data: resp.data, error: resp.error};
+        return {data: resp.data, error: !resp.error?.response ? resp.error : resp.error.response?.data.message};
     }
 
     const onPageChange = (val) => {
@@ -121,9 +121,8 @@ export default function Home(){
                     >
                 </List>
                 <br/>
-                <Pagination size={screens.xs ? 'small' : 'default'} style={{textAlign: 'center'}} defaultCurrent={page} total={dataResp.length} onChange={onPageChange} showSizeChanger={false}  />
+                <Pagination size={screens.xs ? 'small' : 'default'} style={{textAlign: 'center'}} defaultCurrent={page} total={dataResp?.length} onChange={onPageChange} showSizeChanger={false}  />
             </Spin>
-            
         </div>
     )
 }
