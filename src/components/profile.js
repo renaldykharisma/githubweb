@@ -33,7 +33,7 @@ export default function Profile(profileData){
                         />&nbsp;&nbsp;
                         <span >{dataProfileState.login}</span> 
                     </div>
-                    <span>{dataProfileState.bio ? dataProfileState.bio.slice(0, 58).concat('...') : ''}</span>
+                    <span>{dataProfileState.bio ? dataProfileState.bio.slice(0, 58).concat(dataProfileState.bio.length >= 58 ? '...' : '') : ''}</span>
                     <span><HomeOutlined />&nbsp;: {dataProfileState.location ? dataProfileState.location : '-'}</span>
                     <span><BankOutlined />&nbsp;: {dataProfileState.company ? dataProfileState.company : '-'}</span>
                     <span>{dataProfileState.followers}&nbsp;Followers</span>
@@ -45,7 +45,6 @@ export default function Profile(profileData){
                 </Space> 
                 :
                 <div>
-
                 <div className="layout-profile">
                     <Avatar
                         className="avatar-mobile"
